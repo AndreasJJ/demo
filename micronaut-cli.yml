@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.andreasjj
+testFramework: kotest
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [annotation-api, app-name, data, data-jdbc, gradle, http-client, jdbc-hikari, kotest, kotlin, kotlin-application, logback, netty-server, postgres, readme, shade, testcontainers, yaml]
