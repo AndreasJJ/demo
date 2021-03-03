@@ -1,3 +1,30 @@
+# Repo for micronaut issue
+```
+backend_1            | 18:34:43.665 [main] ERROR io.micronaut.runtime.Micronaut - Error starting Micronaut server: Bean definition [io.micronaut.data.jdbc.config.SchemaGenerator] could not be loaded: Error instantiating bean of type [io.micronaut.data.jdbc.config.SchemaGenerator]: Unable to create table column for property [roundId] of entity [com.andreasjj.Round] with unknown data type: ENTITY
+backend_1            | io.micronaut.context.exceptions.BeanInstantiationException: Bean definition [io.micronaut.data.jdbc.config.SchemaGenerator] could not be loaded: Error instantiating bean of type [io.micronaut.data.jdbc.config.SchemaGenerator]: Unable to create table column for property [roundId] of entity [com.andreasjj.Round] with unknown data type: ENTITY
+backend_1            |  at io.micronaut.context.DefaultBeanContext.initializeContext(DefaultBeanContext.java:1549)
+backend_1            |  at io.micronaut.context.DefaultApplicationContext.initializeContext(DefaultApplicationContext.java:220)
+backend_1            |  at io.micronaut.context.DefaultBeanContext.readAllBeanDefinitionClasses(DefaultBeanContext.java:2838)
+backend_1            |  at io.micronaut.context.DefaultBeanContext.start(DefaultBeanContext.java:233)
+backend_1            |  at io.micronaut.context.DefaultApplicationContext.start(DefaultApplicationContext.java:166)
+backend_1            |  at io.micronaut.runtime.Micronaut.start(Micronaut.java:71)
+backend_1            |  at com.andreasjj.ApplicationKt.main(Application.kt:26)
+backend_1            | Caused by: io.micronaut.context.exceptions.BeanInstantiationException: Error instantiating bean of type [io.micronaut.data.jdbc.config.SchemaGenerator]: Unable to create table column for property [roundId] of entity [com.andreasjj.Round] with unknown data type: ENTITY
+backend_1            |  at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:1953)
+backend_1            |  at io.micronaut.context.DefaultBeanContext.createAndRegisterSingletonInternal(DefaultBeanContext.java:2705)
+backend_1            |  at io.micronaut.context.DefaultBeanContext.loadContextScopeBean(DefaultBeanContext.java:2241)
+backend_1            |  at io.micronaut.context.DefaultBeanContext.initializeContext(DefaultBeanContext.java:1543)
+backend_1            |  ... 6 common frames omitted
+backend_1            | Caused by: io.micronaut.data.exceptions.MappingException: Unable to create table column for property [roundId] of entity [com.andreasjj.Round] with unknown data type: ENTITY
+backend_1            |  at io.micronaut.data.model.query.builder.sql.SqlQueryBuilder.addTypeToColumn(SqlQueryBuilder.java:1548)
+backend_1            |  at io.micronaut.data.model.query.builder.sql.SqlQueryBuilder.buildCreateTableStatements(SqlQueryBuilder.java:309)
+backend_1            |  at io.micronaut.data.jdbc.config.SchemaGenerator.createSchema(SchemaGenerator.java:142)
+backend_1            |  at io.micronaut.data.jdbc.config.$SchemaGeneratorDefinition.initialize(Unknown Source)
+backend_1            |  at io.micronaut.data.jdbc.config.$SchemaGeneratorDefinition.build(Unknown Source)
+backend_1            |  at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:1924)
+backend_1            |  ... 9 common frames omitted
+```
+
 ## Micronaut 2.3.4 Documentation
 
 - [User Guide](https://docs.micronaut.io/2.3.4/guide/index.html)
